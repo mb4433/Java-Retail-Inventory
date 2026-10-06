@@ -38,7 +38,10 @@ public void setSku(String newSku) {
 public void setQuantity(int newQuantity) {
 	quantity = newQuantity;
 }
-
+@Override
+public String toString() {
+    return name + " (SKU: " + sku + ") - $" + price + " | Qty: " + quantity;
+}
 
 
 }

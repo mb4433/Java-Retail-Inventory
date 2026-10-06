@@ -7,6 +7,7 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		//creates iv object of InventoryManager Class
 		InventoryManager iv = new InventoryManager();
+		iv.loadInventory();
 		int choice = 0;
 		//loop to continue until user cancels
 		while(cont) {
@@ -69,9 +70,11 @@ public class Main {
 				break;
 			case 4:
 				cont = false;
+				iv.saveInventory();
 				break;
 			}
 		}
+		in.close();
 	}
 
 }
